@@ -1,0 +1,19 @@
+.profile {
+  @include main-block-color($color-profile);
+
+  &__title {
+    margin-bottom: 15px;
+    font-size: 30px;
+  }
+
+  &__profession {
+    font-size: 24px;
+    color: #7b808b;
+  }
+
+  &__photo {
+    border-radius: 50%;
+    box-shadow: 0 0 5px 0 black;
+  }
+}
+

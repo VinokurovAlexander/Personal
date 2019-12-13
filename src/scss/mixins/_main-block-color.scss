@@ -1,0 +1,14 @@
+@mixin main-block-color($color) {
+  &__icon {
+    background-color: #{$color};
+  }
+
+  &__head {
+    border-color: #{$color};
+
+    &::after,
+    &::before {
+      background-color: #{$color};
+    }
+  }
+}

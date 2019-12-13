@@ -1,0 +1,23 @@
+.social-list {
+  width: 40%;
+  margin: 0;
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+.social-list__item {
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

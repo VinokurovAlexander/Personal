@@ -1,0 +1,13 @@
+.page-main {
+  min-height: 500px;
+  background-color: $color-main-bg;
+
+  & > section {
+    margin-bottom: 10px;
+  }
+}
+
+.page-main__social {
+  display: flex;
+  justify-content: flex-end;
+}

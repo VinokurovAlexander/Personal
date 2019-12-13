@@ -1,0 +1,124 @@
+.main-block {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin-right: 24px;
+
+  background-color: $color-main-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -23px;
+
+    width: 0;
+    height: 0;
+    border-top: 32px solid transparent;
+    border-left: 22px solid $color-main-block;
+    border-bottom: 32px solid transparent;
+    box-shadow: -3px 0 0 0 #22262e;
+  }
+
+  &__container {
+    padding: 0 15px;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0 20px ;
+  }
+
+  &__head {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      right: -12px;
+
+      width: 2px;
+      height: 65%;
+    }
+
+    &::after {
+      top: -5px;
+      transform: rotate(-35deg);
+    }
+
+    &::before {
+      bottom: -5px;
+      transform: rotate(35deg);
+    }
+  }
+
+  &__icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+    padding: 10px 0;
+  }
+
+  &__content {
+    display: none;
+
+    width: 100%;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-right: 15px;
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+    flex-grow: 1;
+
+    &--close {
+      img {
+        animation: main-block-close 0.8s ease;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+
+  &--open {
+    .main-block__btn {
+      img {
+         animation: main-block-open 0.8s ease;
+         animation-fill-mode: forwards;
+         animation-delay: 0.8s;
+       }
+    }
+  }
+}
+
+@keyframes main-block-open {
+  100% {
+    transform: translateX(-630%) rotate(-180deg);
+  }
+}
+
+@keyframes main-block-close {
+  0% {
+    transform: translateX(-630%) rotate(-180deg);
+  }
+
+  100% {
+    transform: translateX(0%) rotate(0deg);
+  }
+}
